@@ -25,4 +25,6 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 export EDITOR='vim'
-
+# enable the debugger
+export XDEBUG_CONFIG="idekey=xdebug"
+# export PATH="/usr/local/opt/node@10/bin:$PATH"
