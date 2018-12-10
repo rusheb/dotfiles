@@ -63,9 +63,13 @@ inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
 map <F2> :.w !pbcopy<CR><CR>
 map <F3> :r !pbpaste<CR>
 
+"" WINDOWS
 " splits open below or right rather than above or left
 set splitbelow
 set splitright
+
+:ca Vr vertical resize
+:ca vr vertical resize
 
 ""CONVENIENT REMAPS
 "" esc to tab
