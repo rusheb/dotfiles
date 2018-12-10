@@ -3,7 +3,7 @@ Plug 'AndrewRadev/dsf.vim'
 Plug 'altercation/vim-colors-solarized'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'chaoren/vim-wordmotion'
-Plug 'jelera/vim-javascript-syntax'
+"Plug 'jelera/vim-javascript-syntax'
 Plug 'phpstan/vim-phpstan'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'", { 'on': 'surround' }
