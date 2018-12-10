@@ -1,5 +1,7 @@
 " ---ALE-----------------------------------------------------------------------
 let g:ale_completion_enabled = 1
+
+"let g:ale_php_phpcs_executable = 'vendor/bin/phpcs'
 let g:ale_php_phpcs_standard='PSR2'
 let g:ale_php_phpstan_level = '4'
 let g:ale_linters = {'php': ['phpcs', 'phpstan']}

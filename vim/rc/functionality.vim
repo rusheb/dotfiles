@@ -5,6 +5,9 @@ let g:netrw_browse_split = 4
 let g:netrw_winsize = 30
 let g:netrw_altv = 1
 let g:netrw_winsize = 25
+
+set wildmenu
+
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
