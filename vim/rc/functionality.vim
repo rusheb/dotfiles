@@ -5,6 +5,10 @@ let g:netrw_browse_split = 4
 let g:netrw_winsize = 30
 let g:netrw_altv = 1
 let g:netrw_winsize = 25
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
+
 "" FOLDING
 set foldmethod=syntax
 set foldlevelstart=1
@@ -49,8 +53,8 @@ inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
 
 "" INTER-FILE
 " switch buffers
-nmap <C-P> :bp<CR>
-nmap <C-N> :bn<CR>
+"nmap <C-P> :bp<CR>
+"nmap <C-N> :bn<CR>
 
 " system copy and paste
 map <F2> :.w !pbcopy<CR><CR>

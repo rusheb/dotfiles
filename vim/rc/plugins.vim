@@ -9,6 +9,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'", { 'on': 'surround' }
 Plug 'vim-vdebug/vdebug'
 Plug 'w0rp/ale'
+Plug 'kien/ctrlp.vim'
 "" the below plugins were disabled on 2018-11-29
 "Plug 'scrooloose/nerdtree'", { 'on':  'NERDTree' }
 "Plug 'pangloss/vim-javascript'", { 'on': 'js' }
