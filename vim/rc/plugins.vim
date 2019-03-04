@@ -8,8 +8,11 @@ Plug 'phpstan/vim-phpstan'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'", { 'on': 'surround' }
 Plug 'vim-vdebug/vdebug'
+"Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
+Plug 'rushebshah/phpactor', {'for': 'php', 'do': 'composer install', 'branch': 'case-insensitive-search'}
 Plug 'w0rp/ale'
 Plug 'kien/ctrlp.vim'
+Plug 'davidhalter/jedi-vim'
 "" the below plugins were disabled on 2018-11-29
 "Plug 'scrooloose/nerdtree'", { 'on':  'NERDTree' }
 "Plug 'pangloss/vim-javascript'", { 'on': 'js' }
