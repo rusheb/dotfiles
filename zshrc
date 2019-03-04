@@ -28,3 +28,9 @@ export EDITOR='vim'
 # enable the debugger
 export XDEBUG_CONFIG="idekey=xdebug"
 # export PATH="/usr/local/opt/node@10/bin:$PATH"
+# for settings enforcer
+export SETTINGS_ENFORCER_CONFIG="/Users/rusheb/code/settings-enforcer/config.json"
+export SETTINGS_ENFORCER_TEST_CREDS="/Users/rusheb/creds/google.json"
+
+# for adwordy
+export SECRETS_PATH="/Users/rusheb/creds/google.json"
