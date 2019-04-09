@@ -64,7 +64,7 @@ vnoremap > >gv
 ""   \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
 "set ignorecase
 "set noinfercase
-"autocmd FileType php setlocal omnifunc=phpactor#Complete
+autocmd FileType php setlocal omnifunc=phpactor#Complete
 "let g:phpactorOmniError = v:true
 "inoremap <C-@> <C-x><C-o>
 "

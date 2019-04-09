@@ -19,7 +19,10 @@ let g:ale_lint_on_text_changed = 'never'
 let g:ctrlp_user_command = ['.git/', 'git ls-files --cached --others  --exclude-standard %s']
 
 "---PHPACTOR------------------------------------------------------------------
-nmap <Leader>tt :call phpactor#Transform()<CR>
-nmap gd :call phpactor#GotoDefinition()<CR>
-let g:phpactorCompletionIgnoreCase = 1
-nmap <Leader>mm :call phpactor#ContextMenu()<CR>
+autocmd filetype php nmap <Leader>tt :call phpactor#Transform()<CR>
+autocmd filetype php nmap gd :call phpactor#GotoDefinition()<CR>
+autocmd filetype php let g:phpactorCompletionIgnoreCase = 1
+autocmd filetype php nmap <Leader>mm :call phpactor#ContextMenu()<CR>
+
+"---JEDI----------------------------------------------------------------------
+autocmd filetype python let g:jedi#goto_definitions_command = "gd"
