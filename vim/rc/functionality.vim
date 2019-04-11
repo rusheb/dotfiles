@@ -25,15 +25,16 @@
 "  \ echo "File changed on disk. Buffer reloaded." 
 "
 """ FOLDING
-"set foldmethod=syntax
-"set foldlevelstart=1
-"set nofoldenable
-"
-"let javaScript_fold=1         " JavaScript
-"let php_folding=1             " PHP
-"let sh_fold_enabled=1         " sh
-"let vimsyn_folding='af'       " Vim script
-"
+set foldmethod=syntax
+set foldlevelstart=1
+set nofoldenable
+
+let javaScript_fold=1         " JavaScript
+let php_folding=1             " PHP
+let sh_fold_enabled=1         " sh
+let vimsyn_folding='af'       " Vim script
+autocmd FileType python set foldmethod=indent
+
 """ FORMATTING
 " indentation defaults
 filetype indent on
