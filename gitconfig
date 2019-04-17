@@ -9,3 +9,6 @@ email = rusheb@brainlabsdigital.com
   s = status
   logo = log --oneline
   adog = log --all --decorate --oneline --graph
+
+[core]
+	excludesfile = /Users/rusheb/.gitignore
