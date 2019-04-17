@@ -7,3 +7,5 @@ email = rusheb@brainlabsdigital.com
 [alias]
   diffs = diff --staged
   s = status
+  logo = log --oneline
+  adog = log --all --decorate --oneline --graph
