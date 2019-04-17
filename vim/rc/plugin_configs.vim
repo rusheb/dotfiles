@@ -15,6 +15,9 @@ let g:ale_lint_on_text_changed = 'never'
 :ca AF ALEFix
 :ca AI ALEInfo
 
+"---BLACK----------------------------------------------------------------------
+autocmd BufWritePre *.py execute ':Black'
+
 "---CTRL-P---------------------------------------------------------------------
 let g:ctrlp_user_command = ['.git/', 'git ls-files --cached --others  --exclude-standard %s']
 

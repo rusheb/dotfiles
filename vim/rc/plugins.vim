@@ -12,6 +12,7 @@ Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
 Plug 'w0rp/ale'
 Plug 'kien/ctrlp.vim'
 Plug 'davidhalter/jedi-vim'
+Plug 'ambv/black'
 "" the below plugins were disabled on 2018-11-29
 "Plug 'scrooloose/nerdtree'", { 'on':  'NERDTree' }
 "Plug 'pangloss/vim-javascript'", { 'on': 'js' }
