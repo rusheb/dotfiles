@@ -35,6 +35,9 @@ let sh_fold_enabled=1         " sh
 let vimsyn_folding='af'       " Vim script
 autocmd FileType python set foldmethod=indent
 
+nnoremap <space> zA
+vnoremap <space> zA
+
 """ FORMATTING
 " indentation defaults
 filetype indent on
