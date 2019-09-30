@@ -10,15 +10,13 @@ mkdir ~/code
 mkdir ~/bin
 
 ## Generate SSH keys
-ssh-keygen -t rsa -C "rusheb@brainlabsdigital.com" -f "~/.ssh/id_rsa_work"
 ssh-keygen -t rsa -C "rusheb.shah@gmail.com" -f "~/.ssh/id_rsa"
 ssh-add ~/.ssh/id_rsa
-ssh-add ~/.ssh/id_rsa_work
 # TODO copy my SSH config
 read -p "Copy public keys to their respective github accounts, then press [Enter] to continue"
 
 cd ~/code
-git clone git@personal:rushebshah/dotfiles.git
+git clone git@github.com:rushebshah/dotfiles.git
 
 # install brew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -53,7 +51,6 @@ ln -s ~/code/dotfiles/gitconfig ~/.gitconfig
 ln -s ~/code/dotfiles/gitignore ~/.gitignore
 git config --global core.excludesfile ~/.gitignore
 
-# TODO bashrc
 # TODO need to set the default shell in iterm and also the theme
 
 # set up vim
