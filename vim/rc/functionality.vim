@@ -48,7 +48,7 @@ autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 autocmd FileType php setlocal shiftwidth=4 tabstop=4
 
 "" format json
-"nmap =j :%!python -m json.tool<CR>
+nmap =j :%!python -m json.tool<CR>
 "
 """ SHORTCUTS FOR EDITING TEXT
 "" swap words 
@@ -62,19 +62,17 @@ vnoremap < <gv
 vnoremap > >gv
 
 "" autocomplete
-"" set completeopt=longest,menuone
-"" inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-"" inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
-""   \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
-"set ignorecase
-"set noinfercase
+"" NOTE: this stuff might be slowing down vim quite a lot
+" use phpactor for php autocompletion
 autocmd FileType php setlocal omnifunc=phpactor#Complete
-"let g:phpactorOmniError = v:true
-"inoremap <C-@> <C-x><C-o>
-"
-"inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
-"  \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
-"
+let g:phpactorOmniError = v:true
+" automplete on crtl-space or insertion of of > or $
+autocmd FileType php inoremap <NUL> <C-x><C-o>
+autocmd FileType php inoremap > ><C-x><C-o>
+" autocmd FileType php inoremap $ $<C-x><C-o>
+" select the first option
+" set completeopt=menu, noinsert
+
 """ INTER-FILE
 "" switch buffers
 ""nmap <C-P> :bp<CR>

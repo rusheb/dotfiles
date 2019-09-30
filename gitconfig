@@ -1,8 +1,11 @@
 # This is Git's per-user configuration file.
 [user]
 # Please adapt and uncomment the following lines:
-name = rusheb-brainlabs
-email = rusheb@brainlabsdigital.com
+  name = rusheb
+  email = rusheb.shah@gmail.com
+
+[includeIf "gitdir:~/work/"]
+  path = ~/work/.gitconfig
 
 [alias]
   diffs = diff --staged
@@ -10,5 +13,14 @@ email = rusheb@brainlabsdigital.com
   logo = log --oneline
   adog = log --all --decorate --oneline --graph
 
+  # list files which have changed since REVIEW_BASE
+  # (REVIEW_BASE defaults to 'master' in my zshrc)
+  files = !git diff --name-only $(git merge-base HEAD \"$REVIEW_BASE\")
+
+  # Same as above, but with a diff stat instead of just names
+  # (better for interactive use)
+  stat = !git diff --stat $(git merge-base HEAD \"$REVIEW_BASE\")
+
 [core]
 	excludesfile = /Users/rusheb/.gitignore
+
