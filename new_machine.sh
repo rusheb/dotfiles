@@ -1,6 +1,6 @@
 ## README
-This script is a work in progress!
-Read through it carefully before running and make any neessary modifications
+# This script is a work in progress!
+# Read through it carefully before running and make any neessary modifications
 
 ## TODO
 # copy ssh config
