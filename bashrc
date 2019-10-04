@@ -1,10 +1,19 @@
-export PATH=/Users/rusheb/bin/:$PATH
-export PATH=/usr/local/bin/:$PATH # need this to source the correct version of python
+BLACK="\[\033[0;30m\]"
+RED="\[\033[0;31m\]"
+GREEN="\[\033[0;32m\]"
+YELLOW="\[\033[0;33m\]"
+BLUE="\[\033[0;34m\]"
+PURPLE="\[\033[0;35m\]"
+CYAN="\[\033[0;36m\]"
+WHITE="\[\033[0;37m\]"
+
 
 # Enable bash completion
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 source /usr/local/Cellar/git/2.21.0/etc/bash_completion.d/git-prompt.sh
-export PS1='\[\033[0;33m\]\u@mbp \[\033[0;35m\]\w\[\033[0;36m\]$(__git_ps1) \[\033[0m\]\$ '
+
+export PATH=/Users/rusheb/bin/:$PATH
+export PATH=/usr/local/bin/:$PATH # need this to source the correct version of python
 
 # Start TMUX when terminal is opened
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
