@@ -7,6 +7,14 @@ PURPLE="\[\033[0;35m\]"
 CYAN="\[\033[0;36m\]"
 WHITE="\[\033[0;37m\]"
 
+function personalise_prompt {
+  local username="\u"
+  local cur_location="\w"
+  local git_branch=$(__git_ps1);
+
+  PS1="$PURPLE$cur_location$CYAN$git_branch $WHITE> "
+}
+export PROMPT_COMMAND=personalise_prompt
 
 # Enable bash completion
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
