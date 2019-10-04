@@ -1,0 +1,1 @@
+/Users/rusheb/.vim/plugged/awesome-vim-colorschemes/colors/molokai.vim
