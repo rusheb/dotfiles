@@ -15,7 +15,7 @@ let g:ale_linters = {
       \ }
 let g:ale_fixers = {
       \ 'php': ['phpcbf'],
-      \ 'python': []
+      \ 'python': ['isort']
       \ }
 let g:ale_echo_msg_format = '%linter%: %s'
 let g:ale_lint_on_text_changed = 'never'
