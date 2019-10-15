@@ -43,7 +43,9 @@ export REVIEW_BASE=master
 
 # Aliases
 alias pytree="tree -P '*.py' --prune"
-alias python='python3'
+eval "$(pyenv init -)"
+export PYENV_ROOT="$HOME/.pyenv"
+export PIPENV_PYTHON="$PYENV_ROOT/shims/python"
 
 # Aliases for work
 export FB_CREDS=/Users/rusheb/code/fb-post-booster/facebook.json

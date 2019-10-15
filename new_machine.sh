@@ -23,6 +23,7 @@ git clone git@github.com:rushebshah/dotfiles.git
 
 # Install tools and apps
 brew install python3.7
+brew install pyenv
 brew install tree
 brew cask install firefox
 brew cask install iterm2
