@@ -3,6 +3,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'altercation/vim-colors-solarized'
 Plug 'jez/vim-colors-solarized'
 Plug 'rafi/awesome-vim-colorschemes'
+Plug 'Rigellute/rigel'
 " navigation
 Plug 'AndrewRadev/dsf.vim'
 Plug 'christoomey/vim-tmux-navigator'

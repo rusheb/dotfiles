@@ -17,8 +17,13 @@ set statusline+=%f
 
 "" highlighting
 syntax enable
+
+" SOLARIZED
 " set background=light
 " :ca dark set background=dark
 " :ca light set background=light
 
+" MOLOKAI
 " colorscheme molokai
+
+colorscheme rigel

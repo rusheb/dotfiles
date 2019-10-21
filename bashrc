@@ -23,6 +23,7 @@ source /usr/local/Cellar/git/2.21.0/etc/bash_completion.d/git-prompt.sh
 export PATH=/Users/rusheb/bin/:$PATH
 export PATH=/usr/local/bin/:$PATH # need this to source the correct version of python
 
+export TERM="xterm-256color"
 # Start TMUX when terminal is opened
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
     exec tmux
