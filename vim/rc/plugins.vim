@@ -9,6 +9,7 @@ Plug 'AndrewRadev/dsf.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'chaoren/vim-wordmotion'
 Plug 'kien/ctrlp.vim'
+Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 " other shortcuts
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'", { 'on': 'surround' }

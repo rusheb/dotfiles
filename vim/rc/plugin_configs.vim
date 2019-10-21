@@ -32,6 +32,19 @@ let g:ctrlp_user_command = ['.git/', 'git ls-files --cached --others  --exclude-
 "---JEDI----------------------------------------------------------------------
 autocmd filetype python let g:jedi#goto_definitions_command = "gd"
 
+"---PYMODE--------------------------------------------------------------------
+let g:pymode_virtualenv = 0
+let g:pymode_run = 0
+let g:pymode_breakpoint = 0
+let g:pymode_folding = 0
+let g:pymode_lint = 0
+let g:pymode_rope = 0
+let g:pymode_rope_completion = 0
+let g:pymode_syntax = 0
+let g:pymode_options_colorcolumn = 0
+" let g:pymode_python = 'disable'
+let g:pymode_folding = 0
+
 "---LIVEDOWN------------------------------------------------------------------
 nmap gm :LivedownToggle<CR>
 
