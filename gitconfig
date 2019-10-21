@@ -24,3 +24,5 @@
 [core]
 	excludesfile = /Users/rusheb/.gitignore
 
+[help]
+	autocorrect = 10
