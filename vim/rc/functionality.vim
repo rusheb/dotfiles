@@ -38,6 +38,11 @@ inoremap <Leader><Tab> <Tab>
 " pound to hash
 inoremap £ #
 
+" change where temporary files are created
+set backupdir=/tmp//
+set directory=/tmp//
+set undodir=/tmp//
+
 
 " FOLDING STUFF WAS COMMENTED OUT ON 30/9/2019
 " """ FOLDING
