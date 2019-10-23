@@ -1,7 +1,7 @@
 "" show line numbers
 set number
 set relativenumber
-" set cursorline
+set cursorline
 
 "" tmux stuff?
 set term=screen-256color
