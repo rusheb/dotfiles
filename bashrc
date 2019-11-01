@@ -50,6 +50,7 @@ eval "$(pyenv init -)"
 
 # Aliases for work
 export FB_CREDS=/Users/rusheb/code/fb-post-booster/facebook.json
+export GITHUB_TOKEN=e8c033f8019e8a97cdcf1d56899c64fb271f06ae
 
 # Is this for Haskell?
 source /Users/rusheb/.ghcup/env
