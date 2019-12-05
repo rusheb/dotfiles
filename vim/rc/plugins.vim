@@ -1,9 +1,11 @@
 call plug#begin('~/.vim/plugged')
 " appearance
-Plug 'altercation/vim-colors-solarized'
-Plug 'jez/vim-colors-solarized'
+"Plug 'altercation/vim-colors-solarized'
+"Plug 'jez/vim-colors-solarized'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'Rigellute/rigel'
+" vue
+Plug 'posva/vim-vue'
 " navigation
 Plug 'AndrewRadev/dsf.vim'
 Plug 'christoomey/vim-tmux-navigator'

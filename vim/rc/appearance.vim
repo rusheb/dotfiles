@@ -3,12 +3,12 @@ set number
 set relativenumber
 set cursorline
 
-"" tmux stuff?
+" tmux stuff?
 set term=screen-256color
 
 "" red vertical line
-set colorcolumn=80
-au BufNewFile,BufRead *.py setlocal colorcolumn=88
+set colorcolumn=89
+au BufNewFile,BufRead *.py setlocal colorcolumn=89
 highlight ColorColumn ctermbg=Yellow
 
 "" status bar
@@ -17,6 +17,7 @@ set statusline+=%f
 
 "" highlighting
 syntax enable
+colorscheme rigel
 
 " SOLARIZED
 " set background=light
@@ -26,4 +27,3 @@ syntax enable
 " MOLOKAI
 " colorscheme molokai
 
-colorscheme rigel

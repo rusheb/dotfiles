@@ -45,17 +45,18 @@ set undodir=/tmp//
 
 
 " FOLDING STUFF WAS COMMENTED OUT ON 30/9/2019
-" """ FOLDING
-" set foldmethod=syntax
-" set foldlevelstart=1
-" set nofoldenable
-"
-" let javaScript_fold=1         " JavaScript
-" let php_folding=1             " PHP
-" let sh_fold_enabled=1         " sh
-" let vimsyn_folding='af'       " Vim script
-" autocmd FileType python set foldmethod=indent
-"
+""" FOLDING
+set foldmethod=syntax
+set foldlevelstart=1
+set nofoldenable
+nnoremap zD zMzr
+
+let javaScript_fold=1         " JavaScript
+let php_folding=1             " PHP
+let sh_fold_enabled=1         " sh
+let vimsyn_folding='af'       " Vim script
+autocmd FileType python set foldmethod=indent
+
 " nnoremap <space> zA
 " vnoremap <space> zA
 

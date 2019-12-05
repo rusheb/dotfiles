@@ -6,8 +6,9 @@ let g:ale_php_phpcs_standard='PSR2'
 let g:ale_php_phpstan_level = '4'
 let g:ale_php_phpstan_executable = 'vendor/bin/phpstan'
 
-let g:ale_python_flake8_options = '--max-line-length=88'
-let g:ale_python_mypy_options = '--ignore-missing-imports'
+" IgnoreE203 which incorrectly flags whitespace before colon in a slice
+let g:ale_python_flake8_options = '--max-line-length=88 --ignore=E203,W503'
+let g:ale_python_mypy_options = '--ignore-missing-imports --disallow-untyped-defs'
 
 let g:ale_linters = {
       \ 'php': ['phpcs', 'phpstan'],
