@@ -7,8 +7,9 @@
 
 [alias]
   co = checkout
-  diffs = diff --staged
+  ds = diff --staged
   s = status
+  d = diff
   logo = log --oneline
   adog = log --all --decorate --oneline --graph
 
@@ -25,3 +26,6 @@
 
 [help]
 	autocorrect = 10
+[filesystem "Oracle Corporation|11.0.7|/dev/disk1s2"]
+	timestampResolution = 6000 nanoseconds
+	minRacyThreshold = 0 nanoseconds
