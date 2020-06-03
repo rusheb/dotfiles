@@ -1,6 +1,4 @@
-# This is Git's per-user configuration file.
 [user]
-# Please adapt and uncomment the following lines:
   name = rusheb
   email = rusheb.shah@gmail.com
 
@@ -8,6 +6,7 @@
   path = ~/work/.gitconfig
 
 [alias]
+  co = checkout
   diffs = diff --staged
   s = status
   logo = log --oneline

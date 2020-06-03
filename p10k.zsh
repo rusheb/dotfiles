@@ -40,18 +40,18 @@
     prompt_char             # prompt symbol
   )
 
-  spotify_now_playing () {
-	local color='%F{green}'
-  state=`osascript -e 'tell application "Spotify" to player state as string'`;
-  if [ $state = "playing" ]; then
-    artist=`osascript -e 'tell application "Spotify" to artist of current track as string'`;
-    track=`osascript -e 'tell application "Spotify" to name of current track as string'`;
+  # spotify_now_playing () {
+  #       local color='%F{green}'
+  # state=`osascript -e 'tell application "Spotify" to player state as string'`;
+  # if [ $state = "playing" ]; then
+  #   artist=`osascript -e 'tell application "Spotify" to artist of current track as string'`;
+  #   track=`osascript -e 'tell application "Spotify" to name of current track as string'`;
 
-      echo -n "%{$color%}$LINUX_ARCH_ICON  $artist - $track" ;
+  #     echo -n "%{$color%}$LINUX_ARCH_ICON  $artist - $track" ;
 
-  fi
-  }
-  POWERLEVEL9K_CUSTOM_SPOTIFY="spotify_now_playing"
+  # fi
+  # }
+  # POWERLEVEL9K_CUSTOM_SPOTIFY="spotify_now_playing"
 
   # The list of segments shown on the right. Fill it with less important segments.
   # Right prompt on the last prompt line (where you are typing your commands) gets
@@ -59,7 +59,6 @@
   # last prompt line gets hidden if it would overlap with left prompt.
   typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
     # =========================[ Line #1 ]=========================
-    # custom_spotify
     status                  # exit code of the last command
     command_execution_time  # duration of the last command
     background_jobs         # presence of background jobs
@@ -119,7 +118,7 @@
     # battery               # internal battery
     # wifi                  # wifi speed
     # example               # example user-defined segment (see prompt_example function below)
-    custom_spotify
+    # custom_spotify
   )
 
   # Defines character set used by powerlevel10k. It's best to let `p10k configure` set it for you.
