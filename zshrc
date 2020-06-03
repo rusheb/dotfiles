@@ -1,48 +1,60 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+## POWERLEVEL10K ##
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
-# Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
-export PATH=/Users/rusheb/bin:$PATH
-export PATH="$(brew --prefix)/sbin:$PATH"
-export PATH="$HOME/bin:$PATH"
-export PATH="$HOME/.composer/vendor/bin:$PATH"
-export PATH="/usr/local/sbin:$PATH"
-export PATH="$PATH:/usr/local/lib/ruby/gems/2.5.0/bin/"
-export PATH="/usr/local/opt/ruby/bin:$PATH"
-export PATH="$PATH:/usr/local/lib/ruby/gems/2.6.0/bin/"
+plugins=(gradle-completion) 
 
+## Load completion ##
+autoload -Uz compinit && compinit
 
-ZSH_THEME="custom"
+## ANTIBODY ##
+# Alias for installing new plugins
+alias abinstall='antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh && source ~/.zshrc'
+# Load plugins
+source ~/.zsh_plugins.sh
 
-# Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+## VI MODE ##
+bindkey -v
+export KEYTIMEOUT=20
+bindkey -M viins 'jk' vi-cmd-mode
+bindkey "^P" up-line-or-history
+bindkey "^N" down-line-or-history
 
-# Uncomment the following line to display red dots whilst waiting for completion.
-COMPLETION_WAITING_DOTS="true"
+## FZF ##
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_COMPLETION_TRIGGER='\'
+export FZF_DEFAULT_OPTIONS="--preview"
 
-plugins=(
-  git
-  zsh-syntax-highlighting
-)
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-source $ZSH/oh-my-zsh.sh
+## ALIASES ##
+alias gw=./gradlew
+alias g=git
+alias craft='cd ~/work/craft'
+alias cat=bat
+alias less=bat
+alias ls=exa
+alias c=clear
 
-## xdebug stuff
-export EDITOR='vim'
-# enable the debugger
-export XDEBUG_CONFIG="idekey=xdebug"
-# export PATH="/usr/local/opt/node@10/bin:$PATH"
-export PATH="/usr/local/opt/php@7.1/bin:$PATH"
-export PATH="/usr/local/opt/php@7.1/sbin:$PATH"
+_fzf_complete_git() {
+    ARGS="$@"
+    local branches
+    branches=$(git branch -vv --all)
+    if [[ $ARGS == 'git co'* ]]; then
+        _fzf_complete --reverse --multi -- "$@" < <(
+            echo $branches
+        )
+    else
+        eval "zle ${fzf_default_completion:-expand-or-complete}"
+    fi
+}
 
-# for settings enforcer
-export SETTINGS_ENFORCER_CONFIG="/Users/rusheb/code/settings-enforcer/config.json"
-export SETTINGS_ENFORCER_TEST_CREDS="/Users/rusheb/creds/google.json"
+_fzf_complete_git_post() {
+    awk '{print $1}'
+}
 
-# for adwordy
-export SECRETS_PATH="/Users/rusheb/creds/google.json"
-
-
-## shortcuts
-alias gitk='gitk --all &'
