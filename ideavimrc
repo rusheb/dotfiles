@@ -1,0 +1,27 @@
+" show line numbers
+set number
+set relativenumber
+
+" split navigation
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+"" REMAPS
+" indentation
+nnoremap > >>
+nnoremap < <<
+vnoremap < <gv
+vnoremap > >gv
+
+" misc
+imap jk <Esc>
+noremap £ #
+noremap # £
+
+" stay in normal mode after Shift + F6 refactor
+set idearefactormode=keep
+
+" emulate vim-commentary
+set commentary
