@@ -1,0 +1,14 @@
+call plug#begin('~/.vim/plugged')
+Plug 'Rigellute/rigel'
+Plug 'kien/ctrlp.vim'
+call plug#end()
+
+inoremap £ #
+
+set termguicolors
+syntax enable
+colorscheme rigel
+
+set number
+set relativenumber
+set cursorline
