@@ -6,11 +6,13 @@
   path = ~/work/.gitconfig
 
 [alias]
+  c = commit
   co = checkout
   ds = diff --staged
   s = status
   d = diff
-  logo = log --oneline
+  l = log
+  lo = log --oneline
   adog = log --all --decorate --oneline --graph
 
   # list files which have changed since REVIEW_BASE
