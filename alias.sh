@@ -8,6 +8,7 @@ link gitconfig
 link gitignore
 link p10k.zsh
 link vim
-link vimrc
+# link vimrc ** using vimrc-minimal
 link zsh_plugins.txt
 link zshrc
+link ideavimrc

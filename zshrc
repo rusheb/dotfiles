@@ -17,12 +17,12 @@ alias abinstall='antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh && sou
 # Load plugins
 source ~/.zsh_plugins.sh
 
-## VI MODE ##
-bindkey -v
-export KEYTIMEOUT=20
-bindkey -M viins 'jk' vi-cmd-mode
-bindkey "^P" up-line-or-history
-bindkey "^N" down-line-or-history
+## VIM MODE ##
+#bindkey -v
+#export KEYTIMEOUT=20
+#bindkey -M viins 'jk' vi-cmd-mode
+#bindkey "^P" up-line-or-history
+#bindkey "^N" down-line-or-history
 
 ## FZF ##
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
