@@ -47,7 +47,7 @@ _fzf_complete_git() {
     ARGS="$@"
     local branches
     branches=$(git branch -vv --all)
-    if [[ $ARGS == 'git co'* ]]; then
+    if [[ $ARGS == 'git co'* ]] || [[ $ARGS == 'git branch'* ]] ; then
         _fzf_complete --reverse --multi -- "$@" < <(
             echo $branches
         )
