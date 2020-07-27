@@ -17,17 +17,17 @@ alias abinstall='antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh && sou
 # Load plugins
 source ~/.zsh_plugins.sh
 
-## VIM MODE ##
-#bindkey -v
-#export KEYTIMEOUT=20
-#bindkey -M viins 'jk' vi-cmd-mode
-#bindkey "^P" up-line-or-history
-#bindkey "^N" down-line-or-history
+## VI MODE ##
+bindkey -v
+export KEYTIMEOUT=20
+bindkey -M viins 'jk' vi-cmd-mode
+bindkey "^P" up-line-or-history
+bindkey "^N" down-line-or-history
 
 ## FZF ##
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_COMPLETION_TRIGGER='\'
 export FZF_DEFAULT_OPTIONS="--preview"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -40,7 +40,9 @@ alias cat=bat
 alias less=bat
 alias ls=exa
 alias c=clear
+alias start-craft='az vm start --resource-group craft-rs --name craft-rs'
 
+## FZF ##
 _fzf_complete_git() {
     ARGS="$@"
     local branches
@@ -57,4 +59,3 @@ _fzf_complete_git() {
 _fzf_complete_git_post() {
     awk '{print $1}'
 }
-
