@@ -35,12 +35,15 @@ export FZF_DEFAULT_OPTIONS="--preview"
 ## ALIASES ##
 alias gw=./gradlew
 alias g=git
+alias k=kubectl
 alias craft='cd ~/work/craft'
+alias ls=exa
 alias cat=bat
 alias less=bat
-alias ls=exa
 alias c=clear
 alias start-craft='az vm start --resource-group craft-rs --name craft-rs'
+alias start-sgx='az vm start --resource-group rusheb-sgx --name accvm'
+alias watch='watch '
 
 ## FZF ##
 _fzf_complete_git() {
@@ -59,3 +62,8 @@ _fzf_complete_git() {
 _fzf_complete_git_post() {
     awk '{print $1}'
 }
+
+export PATH="$HOME/.bin:$PATH"
+
+#source /usr/local/share/chruby/chruby.sh
+#chruby ruby-2.7.2

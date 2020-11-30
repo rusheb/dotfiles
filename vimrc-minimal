@@ -1,6 +1,7 @@
 call plug#begin('~/.vim/plugged')
 Plug 'Rigellute/rigel'
 Plug 'kien/ctrlp.vim'
+Plug 'dense-analysis/ale'
 call plug#end()
 
 inoremap £ #
@@ -12,3 +13,11 @@ colorscheme rigel
 set number
 set relativenumber
 set cursorline
+
+set backupdir=$TMPDIR//
+set directory=$TMPDIR//
+
+map <C-J> <C-W>j
+map <C-K> <C-W>k
+map <C-L> <C-W>l
+map <C-H> <C-W>h
