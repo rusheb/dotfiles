@@ -30,5 +30,5 @@ Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
 Plug 'vim-vdebug/vdebug'
 " other apps
 Plug 'shime/vim-livedown'
-Plug 'lervag/vimtex'
+"Plug 'lervag/vimtex'
 call plug#end()
