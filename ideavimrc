@@ -23,5 +23,6 @@ noremap # £
 " stay in normal mode after Shift + F6 refactor
 set idearefactormode=keep
 
-" emulate vim-commentary
+" emulated plugins
 set commentary
+set surround

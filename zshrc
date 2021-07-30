@@ -37,6 +37,8 @@ alias c=clear
 alias start-craft='az vm start --resource-group craft-rs --name craft-rs'
 alias start-sgx='az vm start --resource-group rusheb-sgx --name accvm'
 alias watch='watch '
+alias cgradle=container-gradle
+
 
 ## FZF ##
 _fzf_complete_git() {
