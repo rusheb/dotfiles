@@ -1,0 +1,14 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Rusheb
+	email = rusheb.shah@gmail.com
+[core]
+	excludesfile = /Users/rusheb/.gitignore
+[alias]
+adog = log --all --decorate --oneline --graph
+d = diff
+ds = diff --staged
+l = log
+s = status
+co = checkout
+c = commit
