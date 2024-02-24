@@ -97,9 +97,6 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-export ENV_PATH="/Users/rusheb/code/camlab1/.env"
-# api key for terminal-copilot
-export OPENAI_API_KEY="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"
 
 # pyenv stuff -- is this working??
 # export PYENV_ROOT="$HOME/.pyenv"
@@ -107,3 +104,5 @@ export OPENAI_API_KEY="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"
 # eval "$(pyenv init -)"
 
 export PYTHONPYCACHEPREFIX=/tmp/pycache
+
+source ~/.zshenv
